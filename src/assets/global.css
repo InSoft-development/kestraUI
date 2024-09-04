@@ -1,0 +1,68 @@
+:root {
+		/* font-family */
+		--primary-font: 'Lato', sans-serif;
+		--secondary-font: 'Montserrat', sans-serif;
+
+		/* text colors */
+		--color1: #05b1b1;
+		--color2: #6b00a0;
+		--color-chosen: #e2e3e5;
+}
+
+nav {
+  padding: 30px;
+}
+.btn-outline-secondary {
+	--bs-btn-color: var(--color1);
+}
+
+nav a.router-link-exact-active {
+  color: #ffffff;
+	background: #6d6d79;
+}
+
+.list-group-item-action {
+	--bs-list-group-action-active-bg: var(--color1);
+	--bs-list-group-action-hover-color: #fff;
+	--bs-list-group-action-hover-bg: var(--color1);
+}
+
+.workflow h2, .text-left{
+	text-align: left;
+}
+
+.frames {
+	padding: 20px 0 10px 0;
+	border: 1px solid #000;
+}
+
+.frames h2 {
+	margin: 0 20px 10px 20px;	
+}
+
+.title {
+	padding: 10px 0 10px 20px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #000;
+}
+
+
+.list-group .list-group-item-action.chosen-button {
+  background-color: var(--color-chosen); /* Без !important */
+	color: black;
+  /* Остальные стили */
+}
+
+.table-responsive {
+  max-height: 60vh;
+}
+
+thead {
+  position: sticky;
+  top: -1px;
+  background-color: white;
+}
+
+.full-width-button {
+  width: 100%;
+}

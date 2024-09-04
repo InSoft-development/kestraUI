@@ -1,0 +1,183 @@
+// node.js from a server side
+// on python
+// request on python
+// flask python
+
+
+ASK AN ADVICE
+
+
+sudo npm run dev
+
+json-server --watch data/kestra.json
+
+sudo ./kestra-0.16.6 server local
+
+
+
+target: 'http://10.23.23.32:8080'  - test server
+
+
+http://localhost:8080 - local server
+
+
+
+на след раз:
+какие конкретно поля нужны для вывода?
+Передавать конфиг при запуске флоу.
+namespace выбор в executions?
+TWO BUTTONS WITH LOGS
+on execution is needed?
+
+oo
+executions:
+on click change a bit color
+Make text look normal
+Take away all unneccecary paddings
+Place the text more beautefully
+show chosen execution
+are names okay?
+
+
+
+
+
+CREATED — ожидание обработки.			
+RUNNING — текущее выполнение.     
+PAUSED — остановка выполнения.   серый
+SUCCESS — успешное выполнение.   зеленый
+WARNING — непредвиденное поведение, но выполнение продолжено и отмечено.    желтый
+FAILED — непредвиденное поведение, которое привело к провалу выполнения.    красный
+KILLING — команда для уничтожения выполнения или запуска задачи, система в процессе уничтожения задач.   
+KILLED — выполнение было уничтожено по запросу, больше задач не будет выполняться.
+
+
+
+
+## Создание модального окна в Vite Vue с Bootstrap
+
+Вот пошаговая инструкция по созданию модального окна в вашем проекте Vite Vue с использованием Bootstrap:
+
+1. Настройка проекта
+
+ Установка Bootstrap: 
+   ```bash
+   npm install bootstrap
+   ```
+ Импорт Bootstrap:
+   В вашем главном файле `main.js` или `main.ts` импортируйте Bootstrap CSS:
+   ```javascript
+   import 'bootstrap/dist/css/bootstrap.css' 
+   ```
+
+2. Создание компонента модального окна:
+
+Создайте новый Vue компонент, например `Modal.vue`:
+
+```vue
+<template>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Мое Модальное Окно</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p>Здесь будет контент модального окна</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Modal',
+};
+</script>
+```
+
+3. Использование модального окна:
+
+ Импорт компонента:
+  Импортируйте компонент `Modal.vue` в ваш компонент, где вы хотите его использовать.
+ Отображение компонента:
+  Добавьте компонент `Modal` в шаблон:
+  ```vue
+  <template>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Открыть Модальное Окно
+    </button>
+    <Modal />
+  </template>
+  ```
+
+4. Настройка Bootstrap:
+
+ Использование Bootstrap JS:
+  Импортируйте Bootstrap JS файл в ваш главный файл `main.js` или `main.ts`:
+  ```javascript
+  import  as bootstrap from 'bootstrap'
+  ```
+ Инициализация:
+  Если у вас есть компоненты, требующие взаимодействия с Bootstrap JS (например, слайдеры, карусели), вы можете инициализировать их в файле `main.js` или `main.ts` или в методе `mounted()` вашего компонента:
+  ```javascript
+  mounted() {
+    bootstrap.Carousel.getOrCreateInstance(this.$refs.myCarousel);
+  }
+  ```
+
+5. Дополнительные опции:
+
+ Изменение стилей:
+  Вы можете легко изменить стили модального окна, используя Bootstrap CSS классы.
+ Добавление функциональности:
+  Добавьте свою логику в компонент `Modal` для обработки действий пользователя, например, сохранения данных.
+ Динамическое содержимое:
+  Передайте данные в компонент `Modal` через свойства и используйте их для динамической генерации контента.
+
+Пример с динамическим содержимым:
+
+```vue
+<template>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" @click="openDialog">
+    Открыть Модальное Окно
+  </button>
+  <Modal :title="modalTitle" :message="modalMessage" />
+</template>
+
+<script>
+import Modal from './Modal.vue';
+
+export default {
+  components: {
+    Modal
+  },
+  data() {
+    return {
+      modalTitle: 'Заголовок',
+      modalMessage: 'Текст сообщения',
+    };
+  },
+  methods: {
+    openDialog() {
+      this.modalTitle = 'Новый заголовок';
+      this.modalMessage = 'Новое сообщение';
+    }
+  }
+};
+</script>
+```
+
+Важно:
+
+ Убедитесь, что вы используете правильные ID и классы Bootstrap для модальных окон.
+ Используйте `data-bs-toggle="modal"` и `data-bs-target="#your-modal-id"` для управления открытием и закрытием модального окна.
+ Изучите документацию Bootstrap для получения более подробной информации о доступных опциях и функциях.
+
+Этот простой пример позволит вам создать работающее модальное окно в вашем проекте Vite Vue с использованием Bootstrap.
